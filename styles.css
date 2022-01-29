@@ -1,0 +1,32 @@
+/* *{ padding: 0; margin: 0;} */
+#gameDisplay {
+    width: 480px;
+    height: 320px;
+    position: relative;
+    border: 2px groove black;
+    padding: 0; 
+    margin: 0;
+}
+canvas {
+    position: absolute; 
+    background: #eee; 
+    display: inherit; 
+    margin: 0 auto;
+    padding: 0;
+    
+}
+#ui-display {
+    z-index: 3;
+    padding: 0; 
+    margin: 0;
+}
+#gameCanvas {
+    z-index: 2;
+    padding: 0; 
+    margin: 0;
+}
+#wallpaper {
+    z-index: 1;
+    padding: 0; 
+    margin: 0;
+}
