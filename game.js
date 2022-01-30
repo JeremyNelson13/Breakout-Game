@@ -17,7 +17,7 @@ var brickColumnCount = 5;
 var brickWidth = 75;
 var brickHeight = 20;
 var brickPadding = 10;
-var brickOffsetTop = 15;
+var brickOffsetTop = 20;
 var brickOffsetLeft = 30;
 //
 var bricks = [];
@@ -30,6 +30,7 @@ for (var c=0; c<brickColumnCount; c++) {
 
 var score = 0;
 var lives = 3;
+var playMusic;
 //
 function drawBall() {
     ctx.beginPath();
@@ -146,7 +147,7 @@ function collsionDetection() {
                 b.hitStatus = 0;
                 score++;
                 if(score == brickRowCount*brickColumnCount) {
-                    alert("LEVEL CLEARED! You Scored: " + score);
+                    alert("CLEARED! You Scored: " + score);
                     document.location.reload();
                     }
                 }
@@ -157,13 +158,13 @@ function collsionDetection() {
 }
 
 function drawScore() {
-    ctx.font = "16 pt Arial";
-    ctx.fillStyle = "#0095DD";
+    ctx.font = "bold 16px Arial";
+    ctx.fillStyle = "black";
     ctx.fillText("Score: "+ score, 8, 20);
 } 
 
 function drawLives() {
-    ctx.font = "20 pt Arial";
+    ctx.font = "bold 16px Arial";
     ctx.fillStyle = "black";
     ctx.fillText("Lives: "+ lives, canvas.width-65, 20)
 }
