@@ -30,7 +30,22 @@ for (var c=0; c<brickColumnCount; c++) {
 
 var score = 0;
 var lives = 3;
-var playMusic;
+//
+// var playMusic;
+// function sound(src){
+//     this.sound = document.createElement("audio");
+//     this.sound.src = src;
+//     this.sound.setAttribute("preload", "auto");
+//     this.sound.setAttribute("controls","none")
+//     this.sound.style.display ="none";
+//     document.body.appendChild(this.sound);
+//     this.play = function() {
+//         this.sound.play();
+//     }
+//     this.stop = function(){
+//         this.sound.pause();
+//     }
+// }
 //
 function drawBall() {
     ctx.beginPath();
@@ -74,6 +89,9 @@ function draw() {
     collsionDetection();
     drawScore();
     drawLives();
+    // playMusic = new sound("Assets/Music/circular_strings_theme.mp3");
+    // playMusic.play();
+
     if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
         dx = -dx;
     }
